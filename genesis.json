@@ -1,0 +1,43 @@
+{
+    "name": "example",
+    "genesis": {
+        "nonce": "0x0000000000000000",
+        "timestamp": "0x0",
+        "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000f858f85494fc971cb797caf6ea1908914256fa426decdd73f99482e6ec3f737ca0e754bf8553e26c4d114932088e94048822fb2ddbf0a48e474b26a03f388d94a5b5ae948f22218a8a87f37d545ce8e73b7a7784245a638680c0",
+        "gasLimit": "0x500000",
+        "difficulty": "0x1",
+        "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "coinbase": "0x0000000000000000000000000000000000000000",
+        "alloc": {
+            "0xFC971Cb797CaF6Ea1908914256fa426dECdD73F9": {
+                "balance": "0x22bdd88fed9efc6a000000"
+            }
+        },
+        "number": "0x0",
+        "gasUsed": "0x70000",
+        "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "params": {
+        "forks": {
+            "homestead": 0,
+            "byzantium": 0,
+            "constantinople": 0,
+            "petersburg": 0,
+            "istanbul": 0,
+            "EIP150": 0,
+            "EIP158": 0,
+            "EIP155": 0
+        },
+        "chainID": 100,
+        "engine": {
+            "ibft": {
+                "type": "PoA"
+            }
+        },
+        "blockGasTarget": 0
+    },
+    "bootnodes": [
+        "/dns4/node-1/tcp/31337/p2p/16Uiu2HAmKZiTSmhCTuY8ZkDRHadNasiVrXtQeKiuU1FGaPPtyMu8",
+        "/dns4/node-2/tcp/31337/p2p/16Uiu2HAmSN1w1xFQs1yxGFoho2pjHbFkhtNe1gfmaraPkJME5LgU"
+    ]
+}
