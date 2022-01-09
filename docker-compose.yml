@@ -1,0 +1,44 @@
+version: "3.9"
+services:
+
+  node-1:
+    image: 0xpolygon/polygon-sdk:0.1.0
+    working_dir: /root
+    entrypoint: ""
+    command: "polygon-sdk server --data-dir /root/chain --chain /root/genesis.json --grpc node-1:31336 --libp2p node-1:31337 --jsonrpc node-1:31338 --seal"
+    volumes:
+      - ./genesis.json:/root/genesis.json
+      - ./test-chain-1:/root/chain
+    ports:
+      - 31338:31338
+
+  node-2:
+    image: 0xpolygon/polygon-sdk:0.1.0
+    working_dir: /root
+    entrypoint: ""
+    command: "polygon-sdk server --data-dir /root/chain --chain /root/genesis.json --grpc node-2:31336 --libp2p node-2:31337 --jsonrpc node-2:31338 --seal"
+    volumes:
+      - ./genesis.json:/root/genesis.json
+      - ./test-chain-2:/root/chain
+
+  node-3:
+    image: 0xpolygon/polygon-sdk:0.1.0
+    working_dir: /root
+    entrypoint: ""
+    command: "polygon-sdk server --data-dir /root/chain --chain /root/genesis.json --grpc node-3:31336 --libp2p node-3:31337 --jsonrpc node-3:31338 --seal"
+    volumes:
+      - ./genesis.json:/root/genesis.json
+      - ./test-chain-3:/root/chain
+
+  node-4:
+    image: 0xpolygon/polygon-sdk:0.1.0
+    working_dir: /root
+    entrypoint: ""
+    command: "polygon-sdk server --data-dir /root/chain --chain /root/genesis.json --grpc node-4:31336 --libp2p node-4:31337 --jsonrpc node-4:31338 --seal"
+    volumes:
+      - ./genesis.json:/root/genesis.json
+      - ./test-chain-4:/root/chain
+
+networks:
+  default:
+    name: polygon-network
